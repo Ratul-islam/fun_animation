@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+section {
+    width: 34rem;
+    height: 100vh;
+    background-color: cornflowerblue;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+/* upper three object positioning */
+
+section>img:first-child,
+section>img:nth-child(2),
+section>img:nth-child(3) {
+    position: absolute;
+}
+section>img:first-child {
+    top: 5%;
+    left: -15%;
+    width: 300px;
+    animation: rotation 2s linear infinite;
+}
+section>img:nth-child(2) {
+    
+    width: 150px;
+    left: -10%;
+    top: 40%;
+    animation: BigScale 2s linear infinite;
+}
+section>img:nth-child(3) {
+    top: 25%;
+    right: -15%;
+    width: 300px;
+    animation: rotation 2s linear infinite ;
+}
+
+.logo_sec {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 100px;
+    width: 40%;
+    bottom:10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo_sec>img:first-child,
+.logo_sec>img:nth-child(2),
+.logo_sec>img:last-child {
+    position: relative;
+}
+.logo_sec>img:first-child {
+    width: 100px;
+    animation: SecondRotation 2s linear infinite;
+}
+.logo_sec>img:nth-child(2) {
+    width: 30px;
+    animation: SmallRound 2s linear infinite;
+}
+.logo_sec>img:last-child {
+    width: 100px;
+    animation: SecondRotation 2s linear infinite;
+}
+
+
+/*  animation */
+
+/* Big round bouncy ball aimation */
+
+@keyframes BigScale {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.5);
+    }
+    30% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* Two big rotating triangle animation */
+
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    30% {
+        transform: rotateZ(-15deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+} 
+
+/* small logo rotation animation */
+
+@keyframes SecondRotation {
+    0% {
+        transform: rotateZ(0deg) ;
+    }
+    15% {
+        transform: rotateZ(-15deg) ;
+    }
+    30% {
+        transform: rotateZ(-15deg) ;
+    }
+    45% {
+        transform: rotateZ(15deg) ;
+    }
+    65% {
+        transform: rotateZ(15deg);
+    }
+    75% {
+        transform: rotateZ(0deg);
+    }
+}
+
+/* small shrink grow ball animation */
+
+@keyframes SmallRound {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.2);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    45% {
+        transform: scale(.8);
+    }
+    65% {
+        transform: scale(.8);
+    }
+    75% {
+        transform: scale(1);
+    }
+
+}
